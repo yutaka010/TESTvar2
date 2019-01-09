@@ -353,6 +353,11 @@ html.enable-javascript.window-load .slider-sample{
       padding: 0px;
       margin: auto;
     }
+    .contents{
+      width: auto;
+      height: 610px;
+      text-align: center;
+    }
     .bottom{
       width: auto;
       height: 32px;
@@ -565,4 +570,32 @@ html.enable-javascript.window-load .slider-sample{
 	100% {
 		-moz-transform: rotateX(35deg) rotateY(55deg) rotateZ(360deg);
 	}
+}
+/* ラインの最初の色のスタイル */
+#line {
+	width:100%; /* 横幅100% */
+	height:5px;
+	margin:40px auto;
+	background:#ddd;
+}
+
+/* ラインのアニメーション時の色と動き */
+.fullwidth .expand {
+	width:100%;
+	height:5px;
+	margin:0;
+	background:#17cddd;
+	position:absolute;
+    -moz-animation:fullexpand 5s ease-out;
+	-webkit-animation:fullexpand 5s ease-out;
+}
+
+ /* キーフレームを使った横幅100%のローディングの始まりと終わりの変化 */
+@-moz-keyframes fullexpand {
+	0%  { width:0px;}
+	100%{ width:100%;}
+}
+@-webkit-keyframes fullexpand {
+	0%  { width:0px;}
+	100%{ width:100%;}
 }

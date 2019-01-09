@@ -21,28 +21,28 @@
   }
   </style>
   <script type="text/javascript" charset="utf-8">
-  (function(){
-  var html = document.getElementsByTagName('html')||[];
-  html[0].classList.add('enable-javascript');
-  window.addEventListener("load", function(){
-    html[0].classList.add('window-load');
-  }, false);
-})();
   $(function() {
     var h = $(window).height(); //ブラウザウィンドウの高さを取得
-    $('#main-contents').css('display','none'); //初期状態ではメインコンテンツを非表示
+    $('.content').css('display','none'); //初期状態ではメインコンテンツを非表示
     $('#loader-bg ,#loader').height(h).css('display','block'); //ウィンドウの高さに合わせでローディング画面を表示
   });
+  $(document).ready(function() {
+  	$('#line').addClass('fullwidth');
+  })
   $(window).load(function () {
-    $('#loader-bg').delay(1900).fadeOut(1800); //$('#loader-bg').fadeOut(800);でも可
-    $('#loader').delay(1600).fadeOut(1300); //$('#loader').fadeOut(300);でも可
-    $('#main-contents').css('display', 'block'); // ページ読み込みが終わったらメインコンテンツを表示する
-    $('.menu1').delay(900).fadeIn(3000);
-    $('.menu2').delay(1000).fadeIn(4000);
-    $('.menu3').delay(1100).fadeIn(5000);
-    $('.menu4').delay(1200).fadeIn(6000);
-
-  });
+    var myPromise = $.when(
+      //ここに先に終わらせたい処理を書きます。複数書いても大丈夫です。
+        $('#loading').delay(2600).fadeOut(2000)
+    );
+    myPromise.done(function() {
+      $('#loader-bg').delay(1000).fadeOut(1000)
+      $('.content').css('display','block')
+      $('.menu1').delay(900).fadeIn(3000);
+      $('.menu2').delay(1000).fadeIn(4000);
+      $('.menu3').delay(1100).fadeIn(5000);
+      $('.menu4').delay(1200).fadeIn(6000);
+    });
+});
   $(function() {
     $('h2').delay(1500).fadeIn(4000);
     $('.slide').delay(10500).show();
@@ -71,10 +71,13 @@
   <div id="loader-bg">
     <div id="loading">
       <div class="cssload-loader">
-  	<div class="cssload-inner cssload-one"></div>
-  	<div class="cssload-inner cssload-two"></div>
-  	<div class="cssload-inner cssload-three"></div>
-  </div>
+    	  <div class="cssload-inner cssload-one"></div>
+    	  <div class="cssload-inner cssload-two"></div>
+    	  <div class="cssload-inner cssload-three"></div>
+      </div>
+      <div id="line">
+        <span class="expand"></span>
+      </div>
     </div>
   </div>
   <div id="particles">

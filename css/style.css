@@ -30,7 +30,6 @@ html.enable-javascript.window-load .slider-sample{
     position: relative;
 
   }
-
   .ass{
     position: fixed;
     width: 0;
@@ -52,7 +51,6 @@ html.enable-javascript.window-load .slider-sample{
     border-style: solid;
     border-width: 0 0 100px 100px;
     border-color: transparent transparent #4a4a4a transparent;
-
   }
   .top{
     background-color: #a9a9a9;
@@ -189,7 +187,7 @@ html.enable-javascript.window-load .slider-sample{
   figure{
     display: inline-block;
     width: 980px;
-      margin: 10px auto;
+    margin: 10px auto;
   }
   img{
     padding: 0px;
@@ -216,7 +214,7 @@ html.enable-javascript.window-load .slider-sample{
     margin: 0px;
   }
   .slick-list{
-    overflow: hidden;
+
   }
   .slick-slide{
 
@@ -234,6 +232,20 @@ html.enable-javascript.window-load .slider-sample{
     position: relative;
 
   }
+  #loading{
+    position: absolute;
+    left: 35%;
+    top: 30%;
+  }
+  #loader-bg {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0px;
+    left: 0px;
+    background: #FFF;
+    z-index: 1;
+  }
   .menu{
     background-color: rgba(255, 255, 255, 0.7);
     width: auto;
@@ -246,14 +258,14 @@ html.enable-javascript.window-load .slider-sample{
     margin-right: auto;
   }
   .title{
-    width: 50%;
+    width: 40%;
     height: 230px;
     text-align: center;
     font-size: 25px;
-    margin-left: 10%;
+    margin-left: 5%;
   }
   .title img{
-      width:90%;
+      width:70%;
   }
   .menu_list{
     font-family: 'myFont';
@@ -343,16 +355,11 @@ html.enable-javascript.window-load .slider-sample{
       margin: auto;
       background-color: #c0c0c0;
     }
-    figure{
-      display: inline-block;
-      width: 980px;
-    }
     img{
-      width:240px;
-      height:117px;
-      padding: 0px;
-      margin: auto;
+      display: inline-block;
+      width: 200px;
     }
+
     .contents{
       width: auto;
       height: 610px;
@@ -360,11 +367,10 @@ html.enable-javascript.window-load .slider-sample{
     }
     .bottom{
       width: auto;
-      height: 32px;
-      background-color: rgba(0, 0, 0, 0.5);
-      margin-bottom: 0px;
+      height: 25px;
+      background-color: #a9a9a9;
+      margin-top:17px;
       padding-bottom: 0px;
-      line-height: 25px;;
       text-align: center;
       display: none;
     }
@@ -430,13 +436,6 @@ html.enable-javascript.window-load .slider-sample{
 		-moz-animation: cssload-rotate-three 0.8s linear infinite;
 	border-top: 6px solid rgb(0,0,0);
 }
-
-
-
-
-
-
-
 @keyframes cssload-rotate-one {
 	0% {
 		transform: rotateX(35deg) rotateY(-45deg) rotateZ(0deg);

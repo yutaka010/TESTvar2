@@ -3,6 +3,7 @@
 <meta charset="UTF-8">
 <title>Work/Focus Me</title>
 <head>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
   <link rel="stylesheet" type="text/css" href="css/work.css" />
   <script type="text/javascript" src="js/jquery-2.0.2.min.js"></script>
   <script type="text/javascript" src="./js/slick.min.js"></script>
@@ -52,6 +53,13 @@
 		,'fast');
 	});
 });
+
+$(function(){
+			$('#nav_toggle').click(function(){
+						$(".header").toggleClass('open');
+				$(".nav").slideToggle(500);
+					});
+		});
 </script>
 </head>
 <body>
@@ -63,8 +71,15 @@
   </div>
   <div class="header">
     <div class="title">
-      <p><a href="./index.html"><img src="img/title5.png" height="72px"></a></p>
+      <p><a href="./index.html"><img src="./img/title5.png" height="72px"></a></p>
     </div>
+    <div id="nav_toggle">
+				<div>
+					<span></span>
+					<span></span>
+					<span></span>
+				</div>
+			</div>
     <div class="nav myFontClass">
       <ul>
         <li><a href="./index.html" class="current">Home</a></li>
@@ -82,7 +97,6 @@
     <div class="container">
       <div class="item1">
         <div class="item1_img"><p><a href="https://yutaka010.github.io/TESTver2/"><img src="./img/work1.png" width="400px" height="250px" class="item1_img1"></a></p></div>
-        <div class="item1_hover"><p>Focus Me ポートフォリオ</p></div>
       </div>
       <div class="item2">
         <p><img src="./img/TBD.png"></p>

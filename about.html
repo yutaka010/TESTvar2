@@ -53,6 +53,12 @@
 		,'fast');
 	});
 });
+$(function(){
+  $('#nav_toggle').click(function(){
+    $(".header").toggleClass('open');
+    $(".nav").slideToggle(500);
+  });
+});
   </script>
 </head>
 <body>
@@ -64,8 +70,15 @@
   </div>
   <div class="header">
     <div class="title">
-      <p><a href="./index.html"><img src="img/title5.png" height="72px"></a></p>
+      <p><a href="./index.html"><img src="./img/title5.png" ></a></p>
     </div>
+    <div id="nav_toggle">
+        <div>
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
     <div class="nav myFontClass">
       <ul>
         <li><a href="./index.html" class="current">Home</a></li>
@@ -81,35 +94,39 @@
       <h1 class="myFontClass">About</h1>
       <div class="about_this_site">
         <h2 class="myFontClass">&lt;About this site&gt;</h2>
-        <p>このサイトは Yutaka のポートフォリオサイトです。<br>これから制作した作品等を掲載していく予定です。</p>
+        <p>このサイトは Yutaka のポートフォリオサイトです。これから制作した作品等を掲載していく予定です。</p>
       </div>
     </div>
     <div class="profile">
       <div class="prof_title myFontClass">
-        <h2>&lt;Profile&gt;</h2>
+        <h2 >&lt;Profile&gt;</h2>
       </div>
-      <div class="top myFontClass">
+      <div class="top ">
         <div class="icon">
-          <figure><img src="img/icon.jpg" width="249px" height="249px" alt=""/></figure>
+          <figure><img src="img/icon.jpg" alt=""/></figure>
         </div>
         <div class="name">
-          <p>NAME：Yutaka</p>
+          <p class="pc  myFontClass">NAME：Yutaka</p>
+          <p class="mobile center myFontClass">NAME</p>
+          <p class="mobile-center">Yutaka</p>
         </div>
         <div class="skill">
-          <p>SKILL：HTML/CSS/PHP/javascript/jQuery</p>
-          <p class="left">Photoshop/Illustrator/Unreal Engine 4</p>
-          <p class="left">Unity</p>
+          <p class="center myFontClass mobile">SKILL</p>
+          <p class="mobile">HTML/CSS/PHP/javascript/jQuery/Photoshop/Illustrator/Unreal Engine 4/Unity</p>
+          <p class="pc  myFontClass">SKILL：HTML/CSS/PHP/javascript/jQuery</p>
+          <p class="left pc myFontClass">Photoshop/Illustrator/Unity</p>
+          <p class="left pc myFontClass">Unreal Engine 4</p>
         </div>
       </div>
       <div class="text">
-        <h3 class="myFontClass">&lt;Text&gt;</h3>
+        <h3 class="myFontClass">Text</h3>
       </div>
       <div class="sns">
-        <h3 class="myFontClass">&lt;SNS&gt;</h3>
+        <h3 class="myFontClass">SNS</h3>
         <p>Twitter:<a href="https://twitter.com/yutaka1022as">@yutaka1022as</a><span>←リンク先Twitter</span></p>
       </div>
       <div class="contact">
-        <h3 class="myFontClass">&lt;Contact&gt;</h3>
+        <h3 class="myFontClass">Contact</h3>
         <p>TwitterのDM又はLINE</p>
       </div>
     </div>

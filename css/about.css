@@ -212,7 +212,7 @@ charset "utf-8"
     display: none;
   }
 }
-@media screen and ( max-width:479px ){
+@media screen and ( max-width:850px ){
   html,body {
 
   }
@@ -451,5 +451,12 @@ charset "utf-8"
   .contact p{
     margin-top: 5px;
     font-size: 14px;
+    margin-bottom: 5px;
+  }
+  .sns span{
+    font-size: 10px;
+  }
+  .contact span{
+    font-size: 10px;
   }
 }

@@ -172,9 +172,12 @@ charset "utf-8"
   h1{
     text-align: center;
   }
+  .mobile{
+    display: none;
+  }
 }
 /*スマホ用*/
-@media screen and ( max-width:479px ){
+@media screen and ( max-width:850px ){
   html,body {
 
    }
@@ -366,7 +369,7 @@ charset "utf-8"
     height:100%;
     margin: auto;
     margin-top: 30px;
-  
+
     background-color: rgba(255, 255, 255, 0.7);
     margin-bottom: 50px;
   }
